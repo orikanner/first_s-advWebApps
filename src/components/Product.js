@@ -2,20 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import {  Link } from "react-router-dom";
 const ProductBox = styled.div`
-  
   padding: 1rem;
-
-  
-  
   margin-top:3rem ;
   margin-left: auto;
   margin-right: auto;
+  
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 26px;
   width: 95%;
-  
 
   justify-content: space-between;
   align-items: center;// works the ops of our flex-direction 
@@ -35,15 +31,11 @@ const ProductBox = styled.div`
   img:hover{
     box-shadow:0 0 3px 2px rgba(0, 140, 186, 0.5);
   }
-  
   p {
     margin-left: 2%;
     color: black;
     font-family: arial;
   }
-  
-    
-  
 `;
 
 export default function Product({product}) {  

@@ -8,6 +8,5 @@ export default function ProductsList({productsList}) {
     productsList.map(pr => {
       return <Product key={pr.name}  product ={pr}/>
       } )
-
   )
 }
