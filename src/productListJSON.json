@@ -1,0 +1,18 @@
+[
+    {
+      "name": "hamburger",
+      "price": 25,
+      "img": "https://i.picsum.photos/id/125/200/200.jpg?hmac=hAcxXCRvPrmKoCW1b3Ju59FSZTMFWwHAPU5nmm84n6A",
+      "pageLink" :"/product/hamburger"
+    },
+    {
+      "name": "Steak",
+      "price": 50,
+      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foodnetwork.com%2Frecipes%2Ffood-network-kitchen%2Fpan-seared-t-bone-steak-recipe-2103356&psig=AOvVaw0drw0e3RAdKlHU9Yo-9yCW&ust=1669132141846000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPjhpfTPv_sCFQAAAAAdAAAAABAE"
+    },
+    {
+      "name": "Pizza",
+      "price": 15,
+      "img": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tavolartegusto.it%2Fricetta%2Fpizza-napoletana-pizza-margherita%2F&psig=AOvVaw2sz_sYiATuPGQyZC5t2ID-&ust=1669132215990000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOD035fQv_sCFQAAAAAdAAAAABAE"
+    }
+  ]

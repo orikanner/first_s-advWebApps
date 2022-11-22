@@ -1,22 +1,94 @@
-import React,{ useState , useRef ,useEffect } from "react";//useRef gives ref to html obj 
-import productsList from "./productsList";                         //useEffect when something is chaning run useEffect function
+import React from "react";
+import ProductsList from "./components/ProductsList"; //useEffect when something is chaning run useEffect function
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
+import styled from "styled-components";
+import ProductPage from "./components/ProductPage";
+import productListJSON from "./productListJSON.json";
+
+function Comp() {
+  const [count, setCount] = React.useState(0);
+  const [name, setName] = React.useState("ori");
+
+  function inc() {
+    setCount(count + 1);
+  }
+
+  React.useEffect(() => {
+    const intId = setInterval(() => {
+      setCount(count + 1);
+      
+    }, 1000);
+
+    return function cleanup() {
+      clearInterval(intId);
+    };
+  }, []);
+
+  return (
+    <>
+      <p>the count is {count}</p>
+      <p>i like {count} things</p>
+      <button onClick={inc}>plus</button>
+      <button onClick={() => setName("boaz")}>set name</button>
+    </>
+  );
+}
 
 
+const MyLink = styled.a`
+  margin: 1rem;
+`;
+
+const LinksBox = styled.div`
+  margin: 1rem;
+`;
 
 
 function App() {
-  const productList = [{name: "hamburger", price :25 , img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.biggreenegg.eu%2Fen%2Finspiration%2Frecipes%2Fclassic-hamburger-with-bacon-cheddar-and-jalapeno&psig=AOvVaw0yA5VZM4RX_MLQiUS91S-p&ust=1669132166056000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMiP-P_Pv_sCFQAAAAAdAAAAABAE"},
-                                    {name: "Steak", price :50 , img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foodnetwork.com%2Frecipes%2Ffood-network-kitchen%2Fpan-seared-t-bone-steak-recipe-2103356&psig=AOvVaw0drw0e3RAdKlHU9Yo-9yCW&ust=1669132141846000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPjhpfTPv_sCFQAAAAAdAAAAABAE"},
-                                    {name: "Pizza", price :15 , img:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tavolartegusto.it%2Fricetta%2Fpizza-napoletana-pizza-margherita%2F&psig=AOvVaw2sz_sYiATuPGQyZC5t2ID-&ust=1669132215990000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOD035fQv_sCFQAAAAAdAAAAABAE"}]; 
  
-  return  (
-    <>  
-    <productsList 
-        productsList = {productList}>
-    </productsList>
-    </>
-  );
 
+  return (
+    <Router>
+      <h1>hello</h1>
+      <LinksBox>
+        <Link to="/comp">
+          <MyLink>Comp</MyLink>
+        </Link>
+        <Link to="/">
+          <MyLink>Home</MyLink>
+        </Link>
+        <Link to="/link">
+          <MyLink>ALL</MyLink>
+        </Link>
+      </LinksBox>
+      <Routes>
+        <Route path="/comp" element={<Comp />} />
+        <Route
+          path="/"
+          element={<ProductsList productsList={productListJSON}></ProductsList>}
+        />
+        <Route
+          path="/link"
+          element={
+            <>
+              <ProductsList productsList={productListJSON}></ProductsList>
+              <Comp />
+            </>
+          }
+        />
+        <Route
+          path="/product/:name"
+          element={<ProductPage/>}
+        />
+      </Routes>
+
+     
+
+      <p>&copy; 2022</p>
+    </Router>
+  );
 }
 
 export default App;
+//test one two
+//ggg
