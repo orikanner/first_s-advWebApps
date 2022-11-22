@@ -4,18 +4,22 @@ import {  Link } from "react-router-dom";
 const ProductBox = styled.div`
   
   padding: 1rem;
-  background-color: gray;
-  width: fit-content;
-  margin: 3rem;
+
+  
+  
+  margin-top:3rem ;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 26px;
-  width: 90%;
+  width: 95%;
+  
 
   justify-content: space-between;
   align-items: center;// works the ops of our flex-direction 
-  border-radius: 3% ;
+  box-shadow: 0 1.75px 1.75px 1.75px rgba(9, 9, 9, 0.23);
 
   img {
     max-width:25%;

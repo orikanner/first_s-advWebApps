@@ -31,6 +31,7 @@ const LinksBox = styled.div`
   background-color: #fff;
   color: black;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  
 
 `;
 
@@ -55,17 +56,13 @@ function App() {
           element={<ProductsList productsList={productListJSON}></ProductsList>}
         />
         <Route
-          path="/link"
-          element={
-            <>
-              <ProductsList productsList={productListJSON}></ProductsList>
-            </>
-          }
-        />
-        <Route
           path="/product/:name"
           element={<ProductPage/>}
         />
+        <Route
+          path="*"
+          element = {<p>page not found...</p>}
+          />
       </Routes>
 
      
