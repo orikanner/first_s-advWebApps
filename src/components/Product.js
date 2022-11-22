@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {  Link } from "react-router-dom";
 const ProductBox = styled.div`
   padding: 1rem;
-  background-color: #345;
+  background-color: gray;
   width: fit-content;
   margin: 3rem;
 
@@ -24,13 +24,14 @@ const ProductBox = styled.div`
 
   p {
     margin-left: 2%;
-    color: white;
+    color: black;
   }
 `;
 
 export default function Product({product}) {  
   console.log(product.img);
   return (
+    <>
     <ProductBox>
       <p>
           
@@ -39,5 +40,6 @@ export default function Product({product}) {
       </p>
       <img src={product.img}></img>
     </ProductBox>
+    </>
   )
 }

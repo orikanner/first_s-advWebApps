@@ -5,34 +5,34 @@ import styled from "styled-components";
 import ProductPage from "./components/ProductPage";
 import productListJSON from "./productListJSON.json";
 
-function Comp() {
-  const [count, setCount] = React.useState(0);
-  const [name, setName] = React.useState("ori");
+// function Comp() {
+//   const [count, setCount] = React.useState(0);
+//   const [name, setName] = React.useState("ori");
 
-  function inc() {
-    setCount(count + 1);
-  }
+//   function inc() {
+//     setCount(count + 1);
+//   }
 
-  React.useEffect(() => {
-    const intId = setInterval(() => {
-      setCount(count + 1);
+//   React.useEffect(() => {
+//     const intId = setInterval(() => {
+//       setCount(count + 1);
       
-    }, 1000);
+//     }, 1000);
 
-    return function cleanup() {
-      clearInterval(intId);
-    };
-  }, []);
+//     return function cleanup() {
+//       clearInterval(intId);
+//     };
+//   }, []);
 
-  return (
-    <>
-      <p>the count is {count}</p>
-      <p>i like {count} things</p>
-      <button onClick={inc}>plus</button>
-      <button onClick={() => setName("boaz")}>set name</button>
-    </>
-  );
-}
+//   return (
+//     <>
+//       <p>the count is {count}</p>
+//       <p>i like {count} things</p>
+//       <button onClick={inc}>plus</button>
+//       <button onClick={() => setName("boaz")}>set name</button>
+//     </>
+//   );
+// }
 
 
 const MyLink = styled.a`
@@ -48,21 +48,23 @@ function App() {
  
 
   return (
+    <>
     <Router>
-      <h1>hello</h1>
+      <h1>Check out our Manu</h1>
       <LinksBox>
-        <Link to="/comp">
+        {/* <Link to="/comp">
           <MyLink>Comp</MyLink>
-        </Link>
+        </Link> */}
         <Link to="/">
           <MyLink>Home</MyLink>
         </Link>
-        <Link to="/link">
+        {/* <Link to="/link">
           <MyLink>ALL</MyLink>
-        </Link>
+        </Link> */}
       </LinksBox>
+     
       <Routes>
-        <Route path="/comp" element={<Comp />} />
+        {/* <Route path="/comp" element={<Comp />} /> */}
         <Route
           path="/"
           element={<ProductsList productsList={productListJSON}></ProductsList>}
@@ -72,7 +74,7 @@ function App() {
           element={
             <>
               <ProductsList productsList={productListJSON}></ProductsList>
-              <Comp />
+              {/* <Comp /> */}
             </>
           }
         />
@@ -85,10 +87,10 @@ function App() {
      
 
       <p>&copy; 2022</p>
+      
     </Router>
+    </>
   );
 }
 
 export default App;
-//test one two
-//ggg
