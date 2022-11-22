@@ -5,42 +5,33 @@ import styled from "styled-components";
 import ProductPage from "./components/ProductPage";
 import productListJSON from "./productListJSON.json";
 
-// function Comp() {
-//   const [count, setCount] = React.useState(0);
-//   const [name, setName] = React.useState("ori");
 
-//   function inc() {
-//     setCount(count + 1);
-//   }
 
-//   React.useEffect(() => {
-//     const intId = setInterval(() => {
-//       setCount(count + 1);
-      
-//     }, 1000);
+export const MyTitle = styled.h1`
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
 
-//     return function cleanup() {
-//       clearInterval(intId);
-//     };
-//   }, []);
-
-//   return (
-//     <>
-//       <p>the count is {count}</p>
-//       <p>i like {count} things</p>
-//       <button onClick={inc}>plus</button>
-//       <button onClick={() => setName("boaz")}>set name</button>
-//     </>
-//   );
-// }
-
+`
 
 const MyLink = styled.a`
   margin: 1rem;
+  font-family: "Courier New", Courier, monospace;
 `;
 
 const LinksBox = styled.div`
-  margin: 1rem;
+  
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items:center;
+  position: relative;
+  padding: 0.004rem 0rem;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+
 `;
 
 
@@ -50,21 +41,15 @@ function App() {
   return (
     <>
     <Router>
-      <h1>Check out our Manu</h1>
+      <MyTitle>Check Out Our Manu</MyTitle>
       <LinksBox>
-        {/* <Link to="/comp">
-          <MyLink>Comp</MyLink>
-        </Link> */}
         <Link to="/">
-          <MyLink>Home</MyLink>
+         <><MyLink>Manu</MyLink></> 
         </Link>
-        {/* <Link to="/link">
-          <MyLink>ALL</MyLink>
-        </Link> */}
       </LinksBox>
      
       <Routes>
-        {/* <Route path="/comp" element={<Comp />} /> */}
+        
         <Route
           path="/"
           element={<ProductsList productsList={productListJSON}></ProductsList>}
@@ -74,7 +59,6 @@ function App() {
           element={
             <>
               <ProductsList productsList={productListJSON}></ProductsList>
-              {/* <Comp /> */}
             </>
           }
         />
