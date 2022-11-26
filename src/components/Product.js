@@ -35,7 +35,7 @@ const ProductBox = styled.div`
     margin-left: 2%;
     color: black;
     font-family: arial;
-    margin-left:2%;
+    
   }
 `;
 
