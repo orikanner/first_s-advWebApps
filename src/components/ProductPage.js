@@ -34,6 +34,9 @@ const ProductExtraInfo = styled.div`
     padding:5px;
     margin:10px;
  }
+ img:hover{
+    box-shadow:0 0 3px 2px rgba(0, 140, 186, 0.5);
+  }
  
 `
 const ProductDsc = styled.span`
