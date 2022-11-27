@@ -1,22 +1,14 @@
 import React from "react";
 import ProductsList from "./components/ProductsList"; //useEffect when something is chaning run useEffect function
-import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
-import styled from "styled-components";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ProductPage from "./components/productPage/ProductPage";
 import productListJSON from "./productListJSON.json";
 
-
 import {MyTitle,LinksBox,MyLink} from  "./publicDesign"
 
-
-
-
-
 function App() {
- 
 
   return (
-    <>
     <Router>
       <MyTitle>Check Out Our Menu</MyTitle>
       <LinksBox>
@@ -24,10 +16,7 @@ function App() {
          <><MyLink>Menu</MyLink></> 
         </Link>
       </LinksBox>
-     
-
       <Routes>
-
         <Route
           path="/"
           element={<ProductsList productsList={productListJSON}></ProductsList>}
@@ -41,13 +30,8 @@ function App() {
           element = {<p>page not found...</p>}
           />
       </Routes>
-
-     
-
-      <p>&copy; 2022</p>
-      
+      <p>&copy; Nimi Flaisher and Ori Kanner 2022</p>
     </Router>
-    </>
   );
 }
 
