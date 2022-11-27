@@ -57,12 +57,15 @@ export default function ProductPage({}) {
             <ProductBox>
           <MyTitle>{pr.name}</MyTitle> 
          <ProductExtraInfo>
-           <ProductDsc>{pr.description}</ProductDsc>
+           <ProductDsc>{pr.description}<br></br>
+              You can find a great {pr.name} at {pr.location}
+           </ProductDsc>
              <div>
                 <img src={pr.img}/>
                 <img src={pr.secondImg}/>
              </div>
           </ProductExtraInfo>
+          
           </ProductBox>
         </>
     )

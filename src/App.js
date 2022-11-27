@@ -31,7 +31,6 @@ const LinksBox = styled.div`
   background-color: #fff;
   color: black;
   box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
-  
 
 `;
 
@@ -42,15 +41,16 @@ function App() {
   return (
     <>
     <Router>
-      <MyTitle>Check Out Our Manu</MyTitle>
+      <MyTitle>Check Out Our Menu</MyTitle>
       <LinksBox>
         <Link to="/">
-         <><MyLink>Manu</MyLink></> 
+         <><MyLink>Menu</MyLink></> 
         </Link>
       </LinksBox>
      
+
       <Routes>
-        
+
         <Route
           path="/"
           element={<ProductsList productsList={productListJSON}></ProductsList>}
