@@ -5,17 +5,14 @@ export const ProductBox = styled.div`
   margin-top:3rem ;
   margin-left: auto;
   margin-right: auto;
-  
   position: relative;
   display: flex;
   flex-direction: row;
   gap: 26px;
   width: 95%;
-
   justify-content: space-between;
   align-items: center;// works the ops of our flex-direction 
   box-shadow: 0 1.75px 1.75px 1.75px rgba(9, 9, 9, 0.23);
-
   img {
     max-width:25%;
     max-height:25%;
@@ -34,6 +31,5 @@ export const ProductBox = styled.div`
     margin-left: 2%;
     color: black;
     font-family: arial;
-    
   }
 `;

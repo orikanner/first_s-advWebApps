@@ -7,7 +7,6 @@ import productListJSON from "./productListJSON.json";
 import {MyTitle,LinksBox,MyLink} from  "./publicDesign"
 
 function App() {
- // Ling Meow
 
   return (
     <Router>
@@ -31,7 +30,7 @@ function App() {
           element = {<p>page not found...</p>}
           />
       </Routes>
-      <p>&copy; 2022</p>
+      <p>&copy; Nimi Flaisher and Ori Kanner 2022</p>
     </Router>
   );
 }

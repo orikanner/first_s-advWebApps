@@ -1,12 +1,12 @@
 [
     {
-      "name": "hamburger",
+      "name": "Hamburger",
       "price": 25,
       "img": "https://cdn.cnn.com/cnnnext/dam/assets/220428140436-04-classic-american-hamburgers-full-169.jpg",
       "secondImg":"https://img.freepik.com/premium-psd/3d-render-hamburger-disassemble-transparent-background_252008-1597.jpg?auto=format&h=200",
       "description": "A hamburger, or simply burger, is a food consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll." ,
       "location": "Burger House restaurant",
-      "pageLink" :"/product/hamburger"
+      "pageLink" :"/product/Hamburger"
 
     },
     {

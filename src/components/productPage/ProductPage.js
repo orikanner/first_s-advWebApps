@@ -6,8 +6,6 @@ import { ProductBox } from './PrPageStyle';
 import { ProductExtraInfo } from './PrPageStyle';
 import { ProductDsc } from './PrPageStyle';
 
-
-
 export default function ProductPage({}) {
     const { name } = useParams();
   
@@ -16,23 +14,17 @@ export default function ProductPage({}) {
     if (!pr) return <p>page not found...</p>
   
     return (
-        <>
-            <ProductBox>
-          <MyTitle>{pr.name}</MyTitle> 
-         <ProductExtraInfo>
-           <ProductDsc>{pr.description}<br></br>
-              You can find a great {pr.name} at {pr.location}
-           </ProductDsc>
-             <div>
-                <img src={pr.img}/>
-                <img src={pr.secondImg}/>
-             </div>
-          </ProductExtraInfo>
-          
-          </ProductBox>
-        </>
+      <ProductBox>
+        <MyTitle>{pr.name}</MyTitle> 
+        <ProductExtraInfo>
+          <ProductDsc>{pr.description}<br></br>
+            You can find a great {pr.name} at {pr.location}
+          </ProductDsc>
+          <div>
+            <img src={pr.img}/>
+            <img src={pr.secondImg}/>
+          </div>
+        </ProductExtraInfo>
+      </ProductBox>
     )
-
-  
-  
   }
