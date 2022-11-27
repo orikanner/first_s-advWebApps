@@ -2,7 +2,7 @@ import React from "react";
 import ProductsList from "./components/ProductsList"; //useEffect when something is chaning run useEffect function
 import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 import styled from "styled-components";
-import ProductPage from "./components/ProductPage";
+import ProductPage from "./components/productPage/ProductPage";
 import productListJSON from "./productListJSON.json";
 
 
